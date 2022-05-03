@@ -1,4 +1,4 @@
-function throttle(fun, ms) {
+export function throttle(fun, ms) {
   //fun- функция, которую мы будем вызывать, ms-задержка в миллисекунды
   let isThrottled = false; //переменная-флаг (игнорируются ли наши запросы или нет)
   let savedArgs;

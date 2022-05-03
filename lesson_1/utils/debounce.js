@@ -1,4 +1,4 @@
-const debounce = (fn, ms) => {
+export default debounce = (fn, ms) => {
   //fn- функция, которую мы будем вызывать, ms-задержка в миллисекунды
   let timeout;
   return function () {

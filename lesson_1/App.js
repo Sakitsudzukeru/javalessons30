@@ -1,3 +1,5 @@
+import { throttle } from "./utils/throttle.js";
+
 function playSound(e) {
   // Переменная const audio определяет HTML-элементы, которые воспроизводят звуки барабана
   const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
@@ -28,4 +30,6 @@ keys.forEach((key) => key.addEventListener("transitionend", removeTransition));
 // Чтобы воспроизвести правильный звук при нажатии клавиши, нужен прослушиватель событий,
 // который будет прослушивать событие нажатия клавиши с клавиатуры - это keydown
 
-window.addEventListener("keydown", playSound);
+// вызов
+
+window.addEventListener("keydown", throttle(playSound, 50));
