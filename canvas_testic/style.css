@@ -1,0 +1,11 @@
+body {
+  background-color: black;
+}
+#c {
+  opacity: 0.8;
+}
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
