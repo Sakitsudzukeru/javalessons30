@@ -4,6 +4,9 @@ let lastChecked;
 
 function handleCheck(e) {
   let inBetween = false;
+
+  //отслеживаем последний проверенный элемент, а также получаем представление о том,
+  //где начинать и заканчивать наш список элементов, подлежащих проверке
   if (e.shiftKey && this.checked) {
     checkboxes.forEach((checkbox) => {
       console.log(checkbox);
